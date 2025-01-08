@@ -22,15 +22,20 @@ export default function RootLayout({
         pt-24 sm:pt-32`}
       >
         <div
-          className="bg-[#ce7f83] absolute top-[-6rem] 
-        right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full 
-        blur-[10rem] sm:w-[68.75rem] -z-10"
+          className="absolute top-[-6rem] 
+  right-[-10rem] sm:right-[-5rem] md:right-0 lg:right-[5rem]
+  h-[31.25rem] w-[31.25rem] sm:w-[40rem] md:w-[50rem]
+  rounded-full blur-[10rem] 
+  bg-[#ce7f83] -z-10
+  animate-morphBlob"
         ></div>
         <div
-          className="bg-[#a19bce] absolute top-[-1rem] 
-        left-[-35rem] h-[31.25rem] w-[50rem] rounded-full 
-        blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem]
-        xl:left-[-15rem] 2xl:left-[-5rem] -z-10"
+          className="absolute top-[-1rem]
+  left-[-10rem] sm:left-[-5rem] md:left-0 lg:left-[5rem]
+  h-[31.25rem] w-[31.25rem] sm:w-[40rem] md:w-[50rem]
+  rounded-full blur-[10rem]
+  bg-[#a19bce] -z-10
+  animate-morphBlob animation-delay-2000"
         ></div>
         <Header />
         {children}
