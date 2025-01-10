@@ -1,35 +1,37 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
       animation: {
-        morphBlob: "morphBlob 3s ease-in-out infinite",
+        morphBlob: "morphBlob 15s ease-in-out infinite",
       },
       keyframes: {
         morphBlob: {
           "0%": {
             borderRadius: "60% 40% 30% 70%/60% 30% 70% 40%",
+            transform: "scale(1) rotate(0deg)",
           },
-          "50%": {
-            borderRadius: "20% 60% 70% 40%/40% 70% 30% 60%", 
-          transform: "scale(1.1) translate(-10px, 10px)",
+          "33%": {
+            borderRadius: "70% 30% 50% 50%/30% 30% 70% 70%",
+            transform: "scale(1.4) rotate(90deg)",  // Increased scale, reduced rotation
+          },
+          "66%": {
+            borderRadius: "30% 60% 70% 40%/50% 60% 30% 60%",
+            transform: "scale(0.7) rotate(180deg)",  // Decreased scale, reduced rotation
           },
           "100%": {
             borderRadius: "60% 40% 30% 70%/60% 30% 70% 40%",
-          },
-        },
-      },
-    },
+            transform: "scale(1) rotate(0deg)",  // Reset to initial state
+          }
+        }
+      }
+    }
   },
   plugins: [],
-}
+};

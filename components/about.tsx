@@ -1,28 +1,40 @@
 "use client";
 
+import { useActiveSectionContext } from "@/context/active-section-context";
 import SectionHeading from "./section-heading";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
+import { useSectionInView } from "@/lib/hooks";
 
 export default function About() {
+  const { ref } = useSectionInView({ sectionName: "About", threshold: 0.75 });
+
   return (
-    <motion.section className="mb-28 max-w-[50rem] text-center leadin-8 sm:mb-40"
+    <motion.section
+      className="mb-28 max-w-[50rem] text-center leadin-8 sm:mb-40 scroll-mt-28"
+      ref={ref}
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
+      id="about"
     >
       <SectionHeading title="About Me" />
       <p className="mb-3">
         I am currently pursuing a{" "}
         <span className="font-medium">Master’s in Computer Science</span> at
-        <span className="font-medium">Arizona State University</span>, where I
+        <span className="font-medium"> Arizona State University</span>, where I
         am building a strong foundation in advanced computing concepts and
         innovative technologies. With hands-on experience as a
-        <span className="font-medium">Full-Stack Software Engineer Intern</span>
+        <span className="font-medium">
+          {" "}
+          Full-Stack Software Engineer Intern
+        </span>
         , I thrive at the crossroads of creativity and technology.
       </p>
 
       <p className="mb-3">
-        I enjoy <span className="font-medium">deep-diving into concepts</span>,
+        I enjoy <span className="font-medium"> deep-diving into concepts</span>,
         exploring innovative solutions, and blogging my discoveries as personal
         reference points and learning tools. My passion for experimentation
         drives me to seek out new ideas while steadily building expertise in
