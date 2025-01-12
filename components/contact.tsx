@@ -22,7 +22,7 @@ export default function Contact() {
       viewport={{ once: true }}
     >
       <SectionHeading title="Contact me"></SectionHeading>
-      <p className="text-gray-700 -mt-6">
+      <p className="text-gray-700 -mt-6 dark:text-white/80">
         Please contact me directly at{" "}
         <a className="underline" href="mailt:bhavansh64@gmail.com">
           bhavansh64@gmail.com
@@ -31,27 +31,28 @@ export default function Contact() {
       </p>
       <form
         action={async (formData) => {
-          const { data, error } = await sendEmail(formData);
+          const { error } = await sendEmail(formData);
 
-          if (error) {  
+          if (error) {
             toast.error(error);
             return;
           }
           toast.success("Email sent successfully");
-
         }}
-        className="mt-10 flex flex-col"
+        className="mt-10 flex flex-col dark:text-black"
       >
         <input
           type="email"
           name="senderEmail"
-          className="px-4 h-14 rounded-lg borderBlack"
+          className="px-4 h-14 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 
+            dark:focus:bg-opacity-100 transition-all dark:placeholder:text-black/60 dark:outline-none"
           placeholder="Your email"
           required
           maxLength={500}
         />
         <textarea
-          className="h-52 my-3 rounded-lg borderBlack p-4"
+          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 
+            dark:focus:bg-opacity-100 transition-all dark:placeholder:text-black/60 dark:outline-none"
           placeholder="Your message"
           name="message"
           required

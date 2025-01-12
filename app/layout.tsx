@@ -3,6 +3,8 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import { Toaster } from "react-hot-toast";
+import ThemeSwitch from "@/components/theme-switch";
+import ThemeContextProvider from "@/context/theme-context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +23,7 @@ export default function RootLayout({
     <html lang="en" className="!scroll-smooth">
       <body
         className={`${inter.className} bg-gray-50 text-gray-950 relative
-        pt-24 sm:pt-32 overflow-x-hidden`}
+        pt-24 sm:pt-32 overflow-x-hidden dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
         {/* Red/Pink Blob */}
         <div
@@ -53,11 +55,14 @@ export default function RootLayout({
           animate-morphBlob animation-delay-4000"
         ></div>
 
-        <ActiveSectionContextProvider>
-          <Header />
-          {children}
-          <Toaster position="top-right" />
-        </ActiveSectionContextProvider>
+        <ThemeContextProvider>
+          <ActiveSectionContextProvider>
+            <Header />
+            {children}
+            <Toaster position="top-right" />
+            <ThemeSwitch />
+          </ActiveSectionContextProvider>
+        </ThemeContextProvider>
       </body>
     </html>
   );
