@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth">
       <body
-        className={`${inter.className} bg-gray-50 text-gray-950 relative h-[5000px]
+        className={`${inter.className} bg-gray-50 text-gray-950 relative
         pt-24 sm:pt-32 overflow-x-hidden`}
       >
         {/* Red/Pink Blob */}

@@ -6,13 +6,12 @@ import Link from "next/link";
 import { BsArrowRight, BsGithub, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { RxNotionLogo } from "react-icons/rx";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/context/active-section-context";
-import { useEffect } from "react";
 import { useSectionInView } from "@/lib/hooks";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 export default function Intro() {
   const { ref } = useSectionInView({ sectionName: "Home", threshold: 0.5 });
+    const {setActiveSection, setTimeOfLastClick} = useActiveSectionContext();
 
   return (
     <section
@@ -85,6 +84,10 @@ export default function Intro() {
           className="group bg-gray-900 text-white px-7 py-3 flex items-center
         gap-2 rounded-full outline-none focus-scale-110 hover:scale-110 hover:bg-gray-950 
         active:scale-105 active:bg-gray-950 transition"
+          onClick={() => {
+            setActiveSection("Contact");
+            setTimeOfLastClick(Date.now());
+          }}
         >
           Contact me here
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
@@ -94,7 +97,7 @@ export default function Intro() {
           href="/Resume.pdf"
           className="group bg-white px-7 py-3 flex items-center
         gap-2 rounded-full outline-none focus-scale-110 hover:scale-110 hover:text-gray-950 
-        active:scale-105 active:bg-gray-950 transition border border-black/10"
+        active:scale-105 active:bg-gray-950 transition borderBlack"
           download
         >
           Resume
@@ -107,7 +110,7 @@ export default function Intro() {
             target="_blank"
             className="bg-white p-4 text-gray-700 flex items-center
       gap-2 rounded-full focus-scale-[1.15] hover:scale-[1.15] hover:text-gray-950 
-      active:scale-105 active:bg-gray-950 transition border border-black/10"
+      active:scale-105 active:bg-gray-950 transition borderBlack"
           >
             <BsLinkedin />
           </a>
@@ -117,18 +120,18 @@ export default function Intro() {
             target="_blank"
             className="bg-white p-4 text-gray-700 flex items-center
       gap-2 rounded-full focus-scale-[1.15] hover:scale-[1.15] hover:text-gray-950 
-      active:scale-105 active:bg-gray-950 transition border border-black/10"
+      active:scale-105 active:bg-gray-950 transition borderBlack"
           >
             <BsGithub />
           </a>
 
           <a
             /* TODO: add notion */
-            href=""
+            href="ola"
             target="_blank"
             className="bg-white p-4 text-gray-700 flex items-center
       gap-2 rounded-full focus-scale-[1.15] hover:scale-[1.15] hover:text-gray-950
-      active:scale-105 active:bg-gray-950 transition border border-black/10"
+      active:scale-105 active:bg-gray-950 transition borderBlack"
           >
             <RxNotionLogo />
           </a>
