@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        morphBlob: "morphBlob 15s ease-in-out infinite",
+        morphBlob: "morphBlob 10s ease-in-out infinite",
       },
       keyframes: {
         morphBlob: {

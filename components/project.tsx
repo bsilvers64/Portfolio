@@ -13,7 +13,7 @@ export default function Project({
   tags,
   imageUrl,
 }: ProjectProps) {
-  // start the animaiton when the bottom of the viewport crosses the top of the target (Projects section)
+  // start the animation when the bottom of the viewport crosses the top of the target (Projects section)
   // end the animation when the bottom of the viewport has gone 33% beyond the end of the Project
 
   const ref = useRef<HTMLDivElement>(null);
