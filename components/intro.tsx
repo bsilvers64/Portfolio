@@ -16,7 +16,7 @@ export default function Intro() {
   return (
     <section
       ref={ref}
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
+      className="mb-32 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem] mt-4"
       id="home"
     >
       <div className="flex items-center justify-center">
@@ -94,11 +94,11 @@ export default function Intro() {
         </Link>
 
         <a
-          href="/Resume.pdf"
+          href="/BhavanshResume_.pdf"
           className="group bg-white px-7 py-3 flex items-center
         gap-2 rounded-full outline-none focus-scale-110 hover:scale-110 hover:text-gray-950 
-        active:scale-105 active:bg-gray-950 transition borderBlack dark:bg-white/10 
-        dark:hover:bg-white/20 dark:hover:text-white/80"
+        active:scale-105 active:bg-gray-950 transition borderBlack dark:bg-white/20 
+        dark:hover:bg-white/30 dark:hover:text-white/80"
           download
         >
           Resume
@@ -112,7 +112,7 @@ export default function Intro() {
             className="bg-white p-4 text-gray-700 flex items-center
       gap-2 rounded-full focus-scale-[1.15] hover:scale-[1.15] hover:text-gray-950 
       active:scale-105 active:bg-gray-950 transition borderBlack 
-      dark:bg-white/10 dark:text-white/60 dark:hover:bg-white/20 dark:hover:text-white/80"
+      dark:bg-white/20 dark:text-white/60 dark:hover:bg-white/30 dark:hover:text-white/80"
           >
             <BsLinkedin />
           </a>
@@ -123,19 +123,19 @@ export default function Intro() {
             className="bg-white p-4 text-gray-700 flex items-center
       gap-2 rounded-full focus-scale-[1.15] hover:scale-[1.15] hover:text-gray-950 
       active:scale-105 active:bg-gray-950 transition borderBlack 
-      dark:bg-white/10 dark:text-white/60 dark:hover:bg-white/20 dark:hover:text-white/80"
+      dark:bg-white/20 dark:text-white/60 dark:hover:bg-white/30 dark:hover:text-white/80"
           >
             <BsGithub />
           </a>
 
           <a
             /* TODO: add notion */
-            href="ola"
+            href="https://marmalade-practice-424.notion.site/Frontend-Notes-14c3ca7f759c802f9bc4c4c10bba312a"
             target="_blank"
             className="bg-white p-4 text-gray-700 flex items-center
       gap-2 rounded-full focus-scale-[1.15] hover:scale-[1.15] hover:text-gray-950
       active:scale-105 active:bg-gray-950 transition borderBlack 
-      dark:bg-white/10 dark:text-white/60 dark:hover:bg-white/20 dark:hover:text-white/80"
+      dark:bg-white/20 dark:text-white/60 dark:hover:bg-white/30 dark:hover:text-white/80"
           >
             <RxNotionLogo />
           </a>

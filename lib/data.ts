@@ -5,6 +5,14 @@ import corpcommentImg from "@/public/corpcomment.png";
 import rmtdevImg from "@/public/rmtdev.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 
+import systemMonitor from "@/public/systemMonitor.png";
+import travelPulse from "@/public/travelPulse1.png";
+import fizzi from "@/public/Fizzi.png";
+import cnva from "@/public/CNvotingapp.png";
+import serverlessChat from "@/public/serverlessChat.png";
+import nexMeet from "@/public/nexMeet.png";
+import invoiceGenie from "@/public/invoices1.png";
+
 export const links = [
   {
     name: "Home",
@@ -59,30 +67,73 @@ export const experiencesData = [
   },
 ] as const;
 
-
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Invoice-Genie",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "A Full-Stack invoicing app for creating, managing, and securing invoices with payment integration.",
+    tags: ["Next.js", "React", "Tailwind CSS", "shadcn/ui", "Drizzle ORM", "Clerk"],
+    imageUrl: invoiceGenie,
+    githubLink: "https://github.com/bsilvers64/Invoice-Genie"
   },
   {
-    title: "rmtDev",
+    title: "Fizzi-Pop",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "An interactive 3D eCommerce landing page featuring dynamic content, advanced animations, and responsive 3D graphics",
+    tags: ["Next.js", "Three.js", "React-Three-Fiber", "GSAP", "Tailwind CSS"],
+    imageUrl: fizzi,
+    githubLink: "https://github.com/bsilvers64/Fizzi"
   },
   {
-    title: "Word Analytics",
+    title: "System Monitor",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "A cloud-native monitoring app with Python, Docker, Kubernetes (EKS), and ECR, showcasing real-time system metrics.",
+    tags: ["Flask", "Plotly", "Docker", "Kubernetes", "AWS EKS", "AWS EKS"],
+    imageUrl: systemMonitor,
+    githubLink: "https://github.com/bsilvers64/cloud-native-monitoring-app"
   },
-  
+  {
+    title: "TravelPulse",
+    description:
+      "A ride-booking app for seamless navigation, cost estimation, and real-time map rendering with interactive route visualization.",
+    tags: ["React Native", "Tailwind CSS", "Google Maps APIs", "Redux Toolkit"],
+    imageUrl: travelPulse,
+    githubLink: "https://github.com/bsilvers64/TravelPulse"
+  },
+  {
+    title: "Cloud Native Voting App",
+    description:
+      " cloud-native voting application leveraging Kubernetes, Amazon EKS, and MongoDB for scalable and resilient deployment",
+    tags: ["Amazon EKS", "Kubernetes", "React", "MongoDB"],
+    imageUrl: cnva,
+    githubLink: "https://github.com/bsilvers64/cloud-native-voting-application"
+  },
+  {
+    title: "Serverless Chat App",
+    description:
+      "A serverless chat application using AWS services for scalable and secure chat functionality with dynamic user management.",
+    tags: [
+      "AWS S3",
+      "AWS-Lambda",
+      "API Gateway",
+      "DynamoDB",
+      "Cognito",
+      "REST APIs",
+    ],
+    imageUrl: serverlessChat,
+    githubLink: "https://github.com/bsilvers64/Serverless-Chat-App"
+  },
+  {
+    title: "NexMeet",
+    description:
+      "A React and WebRTC-based video conferencing application, browser-to-browser video chats using JavaScript",
+    tags: ["React", "WebRTC", "Node.js", "Socket.IO", "Express.js"],
+    imageUrl: nexMeet,
+    githubLink: "https://github.com/bsilvers64/NexMeet"
+  },
+
+
+
 ] as const;
 
 export const skillsData = [

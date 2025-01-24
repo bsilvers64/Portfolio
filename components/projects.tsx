@@ -3,9 +3,7 @@
 import SectionHeading from "./section-heading";
 import { projectsData } from "@/lib/data";
 import Project from "./project";
-import React, { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/context/active-section-context";
+import React from "react";
 import { useSectionInView } from "@/lib/hooks";
 
 export default function Projects() {
@@ -14,7 +12,7 @@ export default function Projects() {
   return (
     <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
       <SectionHeading title="My Projects" />
-      <div>
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
         {projectsData.map((project, index) => (
           <React.Fragment key={index}>
             <Project {...project} />

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useScroll, motion, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { projectsData } from "@/lib/data";
+import Link from "next/link";
 
 type ProjectProps = (typeof projectsData)[number];
 
@@ -12,6 +13,7 @@ export default function Project({
   description,
   tags,
   imageUrl,
+  githubLink
 }: ProjectProps) {
   // start the animation when the bottom of the viewport crosses the top of the target (Projects section)
   // end the animation when the bottom of the viewport has gone 33% beyond the end of the Project
@@ -33,25 +35,33 @@ export default function Project({
         scale: scaleProgress,
         opacity: opacityProgress,
       }}
-      className="group mb-3 sm:mb-8 last:mb-0"
+      className="group mb-3 sm:mb-6 last:mb-0"
     >
       <section
-        className=" bg-gray-100 max-w-[42rem] border border-gray-300 
-    overflow-hidden sm:pr-8 sm:pl-8 relative sm:h-[20rem] 
-    rounded-lg hover:bg-gray-200 even:bg-gray-50
-    sm:group-even:pl-8 shadow-md hover:shadow-lg transition-all duration-300
+        className="bg-gray-100 max-w-[30rem] border border-gray-300 
+    overflow-hidden sm:pr-6 sm:pl-6 relative sm:h-[16rem] 
+    rounded-md hover:bg-gray-200 shadow-md hover:shadow-lg transition-all duration-300
     dark:bg-white/10 dark:border-gray-700 dark:hover:bg-white/20"
       >
+        {githubLink ? (
+          <Link 
+            href={githubLink} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="absolute inset-0 z-10"
+          />
+        ) : null}
+
         <div
-          className="py-4 px-5 sm:pl-10  sm:pr-2 sm:pt-10 sm:max-w-[50%] 
-            flex flex-col h-full pt-4 pb-7 sm:group-even:ml-[18rem] "
+          className="py-3 px-4 sm:pl-8 sm:pr-2 sm:pt-6 sm:max-w-[60%] 
+            flex flex-col h-full pt-3 pb-5"
         >
-          <h3 className="text-2xl font-semibold">{title}</h3>
-          <p className="mt-2 leading-relaxed text-gray-700 dark:text-white/70">{description}</p>
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
+          <h3 className="text-xl font-semibold">{title}</h3>
+          <p className="mt-1 mb-3 leading-relaxed text-gray-700 dark:text-white/70">{description}</p>
+          <ul className="flex flex-wrap mt-3 gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li
-                className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider
+                className="bg-black/[0.7] px-2 py-1 text-[0.65rem] uppercase tracking-wider
                text-white rounded-full dark:text-white/70"
                 key={index}
               >
@@ -62,21 +72,14 @@ export default function Project({
         </div>
         <Image
           src={imageUrl}
-          width={400}
-          height={300}
+          width={280}
+          height={210}
           alt="Project I worked on"
-          className="absolute top-8 hidden sm:block
-        -right-40 w-[28.5rem] rounded-t-lg shadow-2xl group-even:right-[initial] group-even:-left-40 
-        group-hover:translate-y-3 
-        group-hover:-rotate-2 
-        group-hover:-translate-x-3 
-
-        group-even:group-hover:translate-y-3 
-        group-even:group-hover:rotate-2 
-        group-even:group-hover:translate-x-3 
-
-        group-hover:scale-[1.04] 
-        transition"
+          className="absolute top-6 hidden sm:block
+        -right-24 w-[18rem] rounded-t-md shadow-2xl group-hover:translate-y-2 
+        group-hover:-rotate-2 group-hover:-translate-x-2 
+        group-even:group-hover:rotate-2 group-even:group-hover:translate-x-2 
+        group-hover:scale-[1.03] transition"
         ></Image>
       </section>
     </motion.div>
