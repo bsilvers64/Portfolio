@@ -7,17 +7,18 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import { useSectionInView } from "@/lib/hooks";
 
+
 export default function About() {
   const { ref } = useSectionInView({ sectionName: "About", threshold: 0.75 });
 
   return (
     <motion.section
-      className="mb-28 max-w-[50rem] text-center leading-8 sm:mb-40 scroll-mt-32"
       ref={ref}
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 0.175 }}
       id="about"
+      className="mb-28 max-w-[50rem] text-center leading-8 sm:mb-40 scroll-mt-32 px-1"
     >
       <SectionHeading title="About Me" />
       <p className="mb-3">
