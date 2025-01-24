@@ -13,6 +13,8 @@ export const metadata = {
   title: "Bhavansh's Portfolio",
   description:
     "Bhavansh is a full-stack developer pursuing Masters in Computer Science from ASU",
+  viewport:
+    "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
 };
 
 export default function RootLayout({
@@ -26,8 +28,7 @@ export default function RootLayout({
         className={`${inter.className} bg-gray-50 text-gray-950 relative
         pt-24 sm:pt-32 overflow-x-hidden dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
-
-      <BlobBackground/>
+        <BlobBackground />
 
         <ThemeContextProvider>
           <ActiveSectionContextProvider>

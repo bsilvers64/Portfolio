@@ -5,7 +5,6 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-
   theme: {
     extend: {
       animation: {
@@ -19,19 +18,19 @@ module.exports = {
           },
           "33%": {
             borderRadius: "70% 30% 50% 50%/30% 30% 70% 70%",
-            transform: "scale(1.4) rotate(90deg)",  // Increased scale, reduced rotation
+            transform: "scale(1.4) rotate(90deg)",
           },
           "66%": {
             borderRadius: "30% 60% 70% 40%/50% 60% 30% 60%",
-            transform: "scale(0.7) rotate(180deg)",  // Decreased scale, reduced rotation
+            transform: "scale(0.7) rotate(180deg)",
           },
           "100%": {
             borderRadius: "60% 40% 30% 70%/60% 30% 70% 40%",
-            transform: "scale(1) rotate(0deg)",  // Reset to initial state
-          }
-        }
-      }
-    }
+            transform: "scale(1) rotate(0deg)",
+          },
+        },
+      },
+    },
   },
   plugins: [],
   darkMode: "class",

@@ -62,19 +62,19 @@ export default function BackgroundBlobs() {
   return (
     <div ref={blobContainerRef}>
       <div
-        className="absolute top-[-6rem] right-[-10rem] sm:right-[-5rem] md:right-0 lg:right-[5rem]
+        className="hidden sm:block absolute top-[-6rem] right-[-10rem] sm:right-[-5rem] md:right-0 lg:right-[5rem]
         h-[31.25rem] w-[31.25rem] sm:w-[40rem] md:w-[50rem] rounded-full blur-[10rem] opacity-80
         -z-10 animate-morphBlob transition-colors duration-5000"
         style={{ backgroundColor: colors[0] }}
       />
       <div
-        className="absolute top-[-1rem] left-[-10rem] sm:left-[-5rem] md:left-0 lg:left-[5rem]
+        className="hidden sm:block absolute top-[-1rem] left-[-10rem] sm:left-[-5rem] md:left-0 lg:left-[5rem]
         h-[31.25rem] w-[31.25rem] sm:w-[40rem] md:w-[50rem] rounded-full blur-[10rem] opacity-80
         -z-10 animate-morphBlob animation-delay-2000 transition-colors duration-6000"
         style={{ backgroundColor: colors[1] }}
       />
       <div
-        className="absolute top-[15rem] left-[20rem] h-[31.25rem] w-[31.25rem] 
+        className="hidden sm:block absolute top-[15rem] left-[20rem] h-[31.25rem] w-[31.25rem] 
         sm:w-[40rem] md:w-[50rem] rounded-full blur-[10rem] opacity-80
         -z-10 animate-morphBlob animation-delay-4000 transition-colors duration-7000"
         style={{ backgroundColor: colors[2] }}
