@@ -94,7 +94,7 @@ export default function Intro() {
         </Link>
 
         <a
-          href="/BhavanshResume_.pdf"
+          href="/Bhavansh__Resume.pdf"
           className="group bg-white px-7 py-3 flex items-center
         gap-2 rounded-full outline-none focus-scale-110 hover:scale-110 hover:text-gray-950 
         active:scale-105 active:bg-gray-950 transition borderBlack dark:bg-white/20 
